@@ -59,7 +59,7 @@ usernameInput.addEventListener("input", (event)=>{ //foi usado o change as mudan
 emailInput.addEventListener("input", (event)=>{
     const value = event.target.value;
     
-    if(value.includes("@" && ".com")){
+    if(value.includes("@") && value.includes(".com")){
         emailInput.classList.remove("error");
         emailInput.classList.add("correct");
         emailHelper.classList.remove("visible")
