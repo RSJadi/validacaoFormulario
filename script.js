@@ -37,7 +37,9 @@ function togglePopup(input, label) {
 
 togglePopup(usernameInput, usernameLabel)
 togglePopup(emailInput, emailLabel);
-
+togglePopup(idadeInput, idadeLabel);
+togglePopup(senhaInput, senhaLabel);
+togglePopup(confirmaSenhaInput, confirmaSenhaLabel)
 // Validar valor do input username
 usernameInput.addEventListener("input", (event)=>{ //foi usado o change as mudanças acontecem quando o usuário termina de digitar e tira o foco desse input
     const value = event.target.value;
@@ -74,7 +76,7 @@ emailInput.addEventListener("input", (event)=>{
 idadeInput.addEventListener("input", (event)=>{
     const value = event.target.value;
 
-    if (value == "" || value < 18) {
+    if (value === Number("") || value < 18) {
         idadeInput.classList.remove("correct")
         idadeInput.classList.add("error");
         idadeHelper.innerText = "Para realizar o cadastro é necessário idade mínima de 18 anos";
